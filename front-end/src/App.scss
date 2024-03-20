@@ -1,0 +1,22 @@
+.App {
+  &__header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    padding: 1rem 0;
+  }
+
+  &__group {
+    margin-bottom: 1rem;
+    border: 1px solid #000;
+    padding: 1rem;
+    max-width: 300px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
