@@ -32,28 +32,32 @@ function App() {
     <div className="App">
       <header className="App__header">Report-o-matic</header>
       <main className="App__main">
-        <button
-          className="App__button"
-          onClick={viewGroup ? createReport : createGroup}
-        >
-          {viewGroup ? "Create Report" : "Create Group"}
-        </button>
-        <label htmlFor="groupName" className="App__label">
-          Group Name:
-          <input
-            type="text"
-            name="groupName"
-            value={groupName}
-            onChange={handleGroupName}
-            className="form-control"
-            required
-          />
-        </label>
-        {groupList.map((group) => (
-          <div key={group} className="App__group">
-            {group}
-          </div>
-        ))}
+        <div className="App__groupNav">
+          <button
+            className="App__button"
+            onClick={viewGroup ? createReport : createGroup}
+          >
+            {viewGroup ? "Create Report" : "Create Group"}
+          </button>
+          <label htmlFor="groupName" className="App__label">
+            Group Name:
+            <input
+              type="text"
+              name="groupName"
+              value={groupName}
+              onChange={handleGroupName}
+              className="form-control"
+              required
+            />
+          </label>
+          <ul className="App__groupList">
+            {groupList.map((group) => (
+              <li key={group} className="App__group">
+                {group}
+              </li>
+            ))}
+          </ul>
+        </div>
       </main>
     </div>
   );

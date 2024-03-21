@@ -7,6 +7,21 @@
     padding: 1rem 0;
   }
 
+  &__groupNav {
+    display: grid;
+    grid-template-rows: 1fr;
+    max-width: 300px;
+  }
+
+  &__label {
+    font-weight: bold;
+  }
+
+  &__groupList {
+    padding: 0.5rem;
+    list-style: none;
+  }
+
   &__group {
     margin-bottom: 1rem;
     border: 1px solid #000;
